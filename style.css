@@ -21,7 +21,8 @@ header{
         gap: 32px;
         font-size: 16px;
         li{
-            white-space: nowrap;
+            white-space: nowrap
+            ;
         }
     }
     .icones{
