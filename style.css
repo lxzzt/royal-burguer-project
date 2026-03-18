@@ -68,7 +68,7 @@ header{
 .slide.ativo{
     opacity: 1;
     visibility: visible;
-    clip-path: circle(120vw at 85% 50%);
+    clip-path: circle(160vw at 85% 50%);
     transition: opacity 1ms ease,clip-path 2s ease;
     z-index: 1;
     .textos{
