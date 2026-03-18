@@ -86,22 +86,19 @@ header{
 
 
 
-.slide:nth-child(1) .conteudo img{
-    cursor: pointer;
-    width: 30vw;
-    transform: translateX(20%)
-}
-.slide:nth-child(4) .conteudo img{
-    cursor: pointer;
-    width: 20vw;
-    height: 80%;
-    transform: translateX(20%)
-}
 
+
+.slide:nth-child(1) .conteudo img,
 .slide:nth-child(2) .conteudo img,
 .slide:nth-child(3) .conteudo img{
     cursor: pointer;
+    width: 25vw;
+    transform: translateX(32%)
+}
+.slide:nth-child(4) .conteudo img{
+    cursor: pointer;
     width: 30vw;
+    scale: 0.6;
     transform: translateX(30%)
 }
 
