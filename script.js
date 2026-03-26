@@ -9,27 +9,42 @@ const conteudoEsquerda = document.querySelectorAll(".imgCirculo")
 
 
 let contador = 0
+let clicar = true
 
 
 
-conteudoDireita.forEach(alimentoDireita=>{
+conteudoDireita.forEach((alimentoDireita)=>{
     alimentoDireita.onclick = () => {
+
+
+
+        if(clicar) {
+        clicar = false
         const slideAtivo = document.querySelector(".slide.ativo")
         slideAtivo.classList.remove("ativo")
-        slides[contador].classList.add("ativo")
         if(contador==3){contador=0}
         else{
-            contador += 1
+            contador = contador + 1
         }
+        slides[contador].classList.add("ativo")
+        animarTitulo();
+    
+        setTimeout(() =>{
+            clicar= true
+        }, 2000);
     }
-})
+    };})
 
-const splitText = SplitText.create(".textos h2",{
+
+function animarTitulo() {
+    const split = SplitText.create(".slide.ativo .textos h2",{
     type:"chars",
-    mask:"chars"
+    mask: "chars"
 })
-gsap.to(splitText.chars,{
-    y:-10 ,
-    stagger: .1
+gsap.from(split.chars, {
+    y: "100%",
+    duration: 1,
+    stagger: .09,
+    delay: 0.5
 })
-console.log(conteudoEsquerda)
+}
